@@ -1,0 +1,141 @@
+.destination-section {
+  padding: 2rem 0;
+  background-color: var(--gray-50);
+}
+
+/* NEW: Proper heading + controls on same line */
+.destination-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 3rem; /* aligns with carousel-wrapper */
+  padding-right: 3rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.heading {
+  font-size: 2rem;
+  color: var(--gray-900);
+}
+
+.carousel-controls {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.nav-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.nav-button:disabled {
+  background: var(--gray-300);
+  cursor: not-allowed;
+}
+
+.nav-button:hover:enabled {
+  background: #e11d48;
+}
+
+.carousel-wrapper {
+  overflow: hidden;
+  padding: 0 0 0 3rem;
+}
+
+.carousel {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 1rem;
+  scrollbar-width: none;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #ededed;
+  width: 240px;
+  min-width: 240px;
+  box-shadow: 0 0 0 transparent;
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.032);
+}
+
+.card-image {
+  width: 100%;
+  height: 180px;
+  border-radius: 12px 12px 0 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.card-price {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: #f3f4f6;
+  color: #111827;
+  padding: 0.3rem 0.6rem;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 0.85rem;
+  z-index: 2;
+}
+
+.card-body {
+  padding: 0.8rem 1rem;
+}
+
+.card-body h3 {
+  font-size: 1rem;
+  margin: 0 0 0.3rem 0;
+  color: var(--gray-800);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-body p {
+  font-size: 0.9rem;
+  color: var(--gray-500);
+  margin-bottom: 0.5rem;
+}
+
+.card-rating {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: var(--gray-700);
+}
+
+.review-count {
+  color: var(--gray-400);
+}
+
+.empty-section {
+  padding: 2rem;
+  font-size: 1.1rem;
+  color: #666;
+  text-align: center;
+  font-style: italic;
+}

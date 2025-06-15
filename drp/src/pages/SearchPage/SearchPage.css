@@ -1,0 +1,21 @@
+.search-page {
+  padding: 2rem;
+}
+
+.search-title {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.search-results {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.search-loading {
+  font-size: 1.1rem;
+  text-align: center;
+  margin-top: 2rem;
+  color: #374151;
+}

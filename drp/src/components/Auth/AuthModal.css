@@ -1,0 +1,122 @@
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.auth-modal {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+
+.auth-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.auth-modal-header h4 {
+  margin: 0 auto;
+  font-size: 1.5rem;
+}
+
+.close-button {
+  padding: 0.4rem 0.8rem;
+  border-radius: 50px;
+  font-weight: 300;
+  font-size: 24px;
+  background-color: transparent;
+  color: #4b5563; /* Gray-500 */
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.close-button:hover {
+  background-color: #e5e7eb; /* Light Gray on hover */
+  color: #1f2937; /* Gray-800 */
+}
+
+.close-button:active {
+  background-color: #e5e7eb;
+  transform: scale(0.96);
+  color: #111827; /* Gray-900 */
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.floating-label-input {
+  position: relative;
+}
+
+.floating-label-input input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1.6rem 0.75rem 0.25rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.floating-label-input label {
+  position: absolute;
+  left: 0.75rem;
+  top: 1rem;
+  color: #aaa;
+  transition: all 0.2s ease;
+  pointer-events: none;
+}
+
+.floating-label-input input:focus + label,
+.floating-label-input input:not(:placeholder-shown) + label {
+  top: 0.4rem;
+  font-size: 0.75rem;
+  color: #555;
+}
+
+.auth-submit {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  background-color: #ff385c;
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.auth-submit:hover {
+  background-color: #e11d48; /* Darker on hover */
+}
+
+.auth-submit:active {
+  background-color: #be123c;
+  transform: scale(0.96); /* Click scale effect */
+}
+
+.auth-error {
+  color: #dc2626; /* red-600 */
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  text-align: center;
+}

@@ -1,0 +1,76 @@
+.progress-wrapper {
+  width: 100%;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+  overflow-x: auto;
+}
+
+.survey-progress-bar {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.progress-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  padding: 0 1rem;
+  flex-shrink: 0;
+  min-width: 150px;
+}
+
+.dot {
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background-color: #d1f2ef;
+  margin-bottom: 0.5rem;
+  z-index: 2;
+}
+
+.dot.active {
+  background-color: #008489;
+}
+
+.step-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.step-title {
+  font-weight: 900;
+  font-size: 0.95rem;
+  color: #008489;
+}
+
+.step-label {
+  font-size: 1rem;
+  color: #333;
+}
+
+.step-progress {
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+
+/* Connector lines */
+.connector {
+  height: 2px;
+  background-color: #d1f2ef;
+  flex-grow: 1;
+  margin: 0 0.5rem;
+  margin-top: -14px;
+  z-index: 1;
+}
+
+.connector.active {
+  background-color: #008489;
+}

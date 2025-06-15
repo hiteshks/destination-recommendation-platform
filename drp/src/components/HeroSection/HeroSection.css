@@ -1,0 +1,101 @@
+.hero-section {
+  position: relative;
+  height: 75vh;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 1s ease-in-out;
+}
+
+.hero-overlay {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 3rem;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+}
+
+.hero-left {
+  max-width: 40%;
+}
+
+.hero-title {
+  font-size: 3.8rem;
+  margin-bottom: 0.75rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  margin-bottom: 1.25rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.hero-button {
+  padding: 0.9rem 2rem;
+  font-size: 16px;
+  background-color: #ff385c;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  color: white;
+  transition: background-color 0.3s;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.221);
+}
+
+.hero-button:hover {
+  background-color: #e11d48;
+}
+
+.hero-button:active {
+  background-color: #be123c;
+  transform: scale(0.96);
+}
+
+.hero-right {
+  display: flex;
+  align-items: center;
+  width: 60%;
+  height: 100%;
+}
+
+.card-carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+  padding: 24px 24px 24px 12px;
+}
+
+.card-carousel-sliding {
+  display: flex;
+  transition: transform 0.8s ease-in-out;
+  gap: 3rem;
+}
+
+.hero-card {
+  width: 300px;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  position: relative;
+  flex-shrink: 0;
+  transition: transform 0.5s ease;
+}
+
+.hero-card.active {
+  transform: scale(1.05);
+  z-index: 2;
+}
+
+.card-label {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0.5rem;
+  background: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}

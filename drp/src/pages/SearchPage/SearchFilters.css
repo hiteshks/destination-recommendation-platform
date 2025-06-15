@@ -1,0 +1,146 @@
+.search-filters-container {
+  background-color: #f9fafb;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+  border: 1px solid #e5e7eb;
+  max-height: 76vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-filters-container.expanded {
+  overflow-y: auto;
+}
+
+.filter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Already exists */
+  padding: 0.25rem 0; /* Add this to ensure vertical centering */
+  min-height: 3rem; /* Optional: helps maintain consistent height */
+}
+
+.filter-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  line-height: 1.5rem;
+  display: flex;
+  align-items: center; /* Ensures vertical center within header */
+}
+
+.dropdown-toggle-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  width: 36px;
+  padding: 8px;
+  border-radius: 50%;
+  background-color: #e5e7eb;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.dropdown-toggle-btn:hover {
+  background-color: #d1d5db;
+}
+
+.dropdown-toggle-btn:active {
+  transform: scale(0.95);
+}
+
+.dropdown-toggle-btn svg {
+  color: #374151;
+  font-size: 1.4rem;
+}
+
+.filter-group {
+  margin-bottom: 1rem;
+}
+
+.filter-subtitle {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1f2937;
+  line-height: 1.4;
+  padding-bottom: 0.25rem;
+}
+
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.filter-option {
+  padding: 0.5rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 9999px;
+  background-color: white;
+  color: #374151;
+  cursor: pointer;
+  font-size: 0.875rem;
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
+}
+
+.filter-option:hover {
+  background-color: #f3f4f6;
+}
+
+.filter-option.selected {
+  background-color: #fef2f2;
+  border-color: #fca5a5;
+  color: #b91c1c;
+  font-weight: 600;
+}
+
+.filter-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: auto;
+  padding-top: 1rem;
+  background: #f9fafb;
+}
+
+.reset-btn,
+.apply-btn {
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.reset-btn {
+  background-color: #e5e7eb;
+  color: #374151;
+}
+
+.reset-btn:hover {
+  background-color: #d1d5db;
+}
+
+.apply-btn {
+  background-color: #ef4444;
+  color: white;
+}
+
+.apply-btn:hover {
+  background-color: #dc2626;
+}
+
+.applied-tag {
+  font-size: 0.9rem;
+  color: #00a57e;
+  margin-left: 6px;
+}

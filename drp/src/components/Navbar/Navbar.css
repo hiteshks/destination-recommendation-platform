@@ -1,0 +1,297 @@
+.navbar-container {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center; /* Vertically center items */
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #f3f4f6;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  gap: 2rem;
+  border-bottom: 1px solid #e5e7eb;
+  height: 56px;
+  flex-wrap: nowrap; /* Prevent items from wrapping */
+}
+
+/* Flex Groups */
+.navbar-left,
+.navbar-center,
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Center group aligned to center horizontally */
+.navbar-center {
+  flex: 1;
+  justify-content: center;
+}
+
+/* Right group aligned to right */
+.navbar-right {
+  justify-content: flex-end;
+}
+
+/* Logo */
+.navbar-logo {
+  font-family: "Pacifico", cursive;
+  font-size: 1.8rem;
+  color: #2e2e2e;
+  text-decoration: none; /* Removes underline */
+}
+
+/* Search */
+.navbar-search input {
+  padding: 0.8rem 1.2rem;
+  font-size: 14px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  background-color: #f9fafb;
+  color: #2e2e2e;
+  width: 280px;
+  transition: border-color 0.3s ease;
+}
+
+.navbar-search input:focus {
+  outline: none;
+  border-color: #ff385c;
+}
+
+.navbar-search input::placeholder {
+  color: #9ca3af;
+}
+
+/* Menu */
+.navbar-menu {
+  display: flex;
+  gap: 1.8rem;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.navbar-menu::-webkit-scrollbar {
+  display: none;
+}
+
+.navbar-menu a {
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: none;
+  color: #4b5563;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.navbar-menu a:hover {
+  background-color: #e5e7eb;
+  color: #1f2937;
+}
+
+.navbar-menu a:active {
+  background-color: #e5e7eb;
+  transform: scale(0.96);
+  color: #111827;
+}
+
+/* Buttons */
+.auth-button {
+  background-color: #ff385c;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.auth-button:hover:hover {
+  background-color: #e11d48;
+}
+
+.auth-button:active:active {
+  background-color: #be123c;
+  transform: scale(0.96);
+}
+
+.take-survey-button {
+  background-color: #008489;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.take-survey-button:hover {
+  background-color: #007078;
+}
+
+.take-survey-button:active {
+  background-color: #005f67;
+  transform: scale(0.96);
+}
+
+/* Hamburger */
+.hamburger-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  width: 36px;
+  padding: 8px;
+  border-radius: 50%;
+  background-color: #e5e7eb;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.hamburger-menu:hover {
+  background-color: #d1d5db;
+}
+
+.hamburger-menu:active {
+  transform: scale(0.95);
+}
+
+.hamburger-icon {
+  color: #374151;
+  font-size: 1.4rem;
+}
+
+.hamburger-wrapper {
+  position: relative;
+}
+
+/* Dropdown */
+.dropdown-menu {
+  position: absolute;
+  top: 48px;
+  right: 0;
+  width: 220px;
+  background-color: white;
+  border-radius: 16px;
+  padding: 0.75rem 0;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1rem;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #f3f4f6;
+}
+
+.dropdown-icon {
+  font-size: 16px;
+  color: #374151;
+}
+
+.dropdown-item.logout {
+  color: #ef4444;
+  font-weight: 500;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  margin: 0.25rem 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    align-items: stretch;
+    height: auto;
+  }
+
+  .navbar-left,
+  .navbar-center,
+  .navbar-right {
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .navbar-search input {
+    width: 100%;
+  }
+
+  .hamburger-menu {
+    align-self: center;
+  }
+}
+
+.survey-button-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* Reusing hamburger dropdown style */
+.survey-dropdown {
+  top: 48px;
+  right: 0;
+}
+
+/* Keep same dropdown look but tweak spacing */
+.survey-message {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  color: #374151;
+  white-space: normal;
+  padding: 0.75rem 1rem;
+  pointer-events: none;
+}
+
+.navbar-search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--gray-300);
+  border-radius: 8px;
+  padding: 0 0.5rem;
+  transition: border-color 0.3s;
+}
+
+.navbar-search input {
+  border: none;
+  outline: none;
+  padding: 0.6rem;
+  width: 200px;
+  background: transparent;
+}
+
+/* Active state when focused or typing */
+.navbar-search.active {
+  border-color: #ff385c;
+}
+
+.search-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding-left: 0.5rem;
+  display: flex;
+  align-items: center;
+  color: var(--gray-600);
+}
