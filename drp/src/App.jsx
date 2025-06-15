@@ -82,16 +82,15 @@ function App() {
 
   return (
     <div>
-      <Navbar openModal={() => setShowModal(true)} />
+      {location.pathname !== "/survey" && (
+        <Navbar openModal={() => setShowModal(true)} />
+      )}
       <AuthModal isOpen={showModal} onClose={() => setShowModal(false)} />
 
       <Routes>
         <Route path="/survey" element={<SurveyPage user={user} />} />
-
         <Route path="/search" element={<SearchPage />} />
-
         <Route path="/destination/:id" element={<DestinationDetailsPage />} />
-
         <Route
           path="/*"
           element={
@@ -105,7 +104,6 @@ function App() {
                     allDestinations={destinations}
                   />
                 )}
-
                 {Object.entries(sectionData)
                   .filter(
                     ([key]) =>
