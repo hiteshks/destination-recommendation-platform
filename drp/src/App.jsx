@@ -44,11 +44,25 @@ function App() {
 
   useEffect(() => {
     if (user) {
-      dispatch(fetchUserDataIfSurveyed(user.uid));
+      const fromSurvey = location.state?.fromSurvey;
+
+      if (fromSurvey) {
+        // 🔁 Refetch fresh data after survey
+        dispatch(fetchUserDataIfSurveyed(user.uid));
+      } else if (!hasTakenSurvey) {
+        dispatch(fetchUserDataIfSurveyed(user.uid));
+      }
     } else {
       dispatch(fetchHomePageData());
     }
-  }, [dispatch, user]);
+  }, [dispatch, user, location.state]);
+
+  useEffect(() => {
+    if (location.state?.fromSurvey) {
+      // Clear the state so it doesn't refetch on future renders
+      window.history.replaceState({}, document.title);
+    }
+  }, [location.state]);
 
   useEffect(() => {
     if (user && hasTakenSurvey) {

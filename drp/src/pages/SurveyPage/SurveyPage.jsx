@@ -219,7 +219,7 @@ const SurveyPage = () => {
 
             // Wait for fade-out before navigating
             setTimeout(() => {
-              navigate("/recommendations");
+              navigate("/", { state: { fromSurvey: true } });
             }, 1200); // 1.2s fade-out
           } catch (error) {
             console.error("Survey submission failed:", error);
