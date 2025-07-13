@@ -34,7 +34,9 @@
   padding: 0.8rem 1.6rem;
   background-color: var(--gray-100);
   border-radius: 0.5rem;
-  display: inline-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 1rem;
 }
 
